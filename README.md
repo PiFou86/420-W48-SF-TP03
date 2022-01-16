@@ -1,6 +1,6 @@
 # TP03 - Station météo
 
-**LesConsignes sont sujets à modification. Reportez-vous à ce qui est communiqué durant le cours.**
+**Les consignes sont sujets à modification. Reportez-vous à ce qui est communiqué durant le cours.**
 
 ## 1 - Directives
 
@@ -149,5 +149,6 @@ Le code doit être fourni sous la forme d’un projet « Platform.IO » bien str
 - [Wifi manager](https://github.com/khoih-prog/ESP_WiFiManager)
 - [Home assistant](https://www.home-assistant.io)
   - [Courtier mosquitto (MQTT) pour Home assistant](https://www.home-assistant.io/docs/mqtt/broker)
+- [Bibliothèque client MQTT pour ESP32](https://github.com/knolleary/pubsubclient)
 - [Courtier MQTT documentation officielle de mosquitto](https://mosquitto.org)
 - [Domoticz](https://www.domoticz.com)

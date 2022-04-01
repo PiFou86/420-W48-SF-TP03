@@ -6,19 +6,19 @@
 
 ### 1.1 - Déroulement du TP
 
-— La remise du travail doit être effectuée pour le 3 février 2022 à 23:59 maximum
-— Le projet est réalisé en équipe de 2 personnes
-— Vidéo de 5 minutes illustrant le fonctionnement
-— Vidéo promotionnelle de maximum 1 min de votre station
-— Les vidéos doivent être déposées sur Youtube avec une option de partage « non listée »
-— Vous devez utiliser Git pour gérer vos sources
-— Vous devez utiliser SharePoint pour gérer votre document de rapport (Onglet "Fichiers" de votre équipe Teams)
-— La structure de votre répertoire racine doit suivre la structure donnée dans le dépôt Git
-— Le code source doit être dans le répertoire « src » et suivre la structure d’un projet Platform.io
-— Vous devez modifier un fichier README.md contenant :
+- La remise du travail doit être effectuée pour le 3 février 2022 à 23:59 maximum
+- Le projet est réalisé en équipe de 2 personnes
+- Vidéo de 5 minutes illustrant le fonctionnement
+- Vidéo promotionnelle de maximum 1 min de votre station
+- Les vidéos doivent être déposées sur Youtube avec une option de partage « non listée »
+- Vous devez utiliser Git pour gérer vos sources
+- Vous devez utiliser SharePoint pour gérer votre document de rapport (Onglet "Fichiers" de votre équipe Teams)
+- La structure de votre répertoire racine doit suivre la structure donnée dans le dépôt Git
+- Le code source doit être dans le répertoire « src » et suivre la structure d’un projet Platform.io
+- Vous devez modifier un fichier README.md contenant :
   - Le prénom, nom et numéro de matricule de chaque personne
   - Le lien de la vidéo sur Youtube
-— Documentations détaillées de la station (manuel d’utilisation & documentation technique)
+- Documentations détaillées de la station (manuel d’utilisation & documentation technique)
 - La remise du travail doit être effectuée sur et à la date indiquée sur la plateforme d'enseignement
 
 ### 1.2 - À remettre sur la plateforme d'enseignement Léa

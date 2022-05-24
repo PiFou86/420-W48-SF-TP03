@@ -82,7 +82,7 @@ Le regroupement « les hackers de Québec » désire créer un modèle de statio
 
 Minimalement, la station météo doit être capable de collecter les données de température, pression atmosphérique et humidité. Elle doit être capable de se connecter sur un réseau Wifi afin de pouvoir envoyer les données collectées dans courtier de messages de type MQTT. Les données doivent être récupérées et exploitées dans le logiciel de domotique Homeassistant (https://www.home-assistant.io).
 
-**Durant la conception de votre station météo, vous avez eu votre "Eurêka" ! Vous avez un meilleur projet à développer qu'une simple station météo et vous décidez de la mettre en oeuvre un prototype fonctionnel proche du produit final pour le présenter aux pré-sélections des Dragons afin d'obtenir un financement.**
+**Durant la conception de votre station météo, vous avez eu votre "Eurêka" ! Vous avez un meilleur projet à développer qu'une simple station météo et vous décidez de la mettre en oeuvre au travers d'un prototype fonctionnel proche du produit final. Ce produit sera présenté aux pré-sélections des Dragons afin d'obtenir un financement.**
 
 Pour ce projet, vous devez utiliser le matériel et technologies suivantes :
 

@@ -6,7 +6,7 @@
 
 ### 1.1 - Déroulement du TP
 
-- La remise du travail doit être effectuée pour le 3 février 2022 à 23:59 maximum
+- La remise du travail doit être effectuée pour le 9 juin 2022 à 23:59 maximum (Présenté en PM, mais remis officiellement avant minuit)
 - Le projet est réalisé en équipe de 2 personnes
 - Vidéo de 5 minutes illustrant le fonctionnement
 - Vidéo promotionnelle de maximum 1 min de votre station

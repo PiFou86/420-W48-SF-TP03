@@ -147,10 +147,10 @@ Le code doit être fourni sous la forme d’un projet « Platform.IO » bien str
 
 ## 5 - Références
 
-- [Économie d’énergie](https://lastminuteengineers.com/esp32-sleep-modes-power-consumption/)
 - [Wifi manager](https://github.com/khoih-prog/ESP_WiFiManager)
+- [Courtier MQTT documentation officielle de mosquitto](https://mosquitto.org)
+- [Bibliothèque client MQTT pour ESP32](https://github.com/knolleary/pubsubclient)
 - [Home assistant](https://www.home-assistant.io)
   - [Courtier mosquitto (MQTT) pour Home assistant](https://www.home-assistant.io/docs/mqtt/broker)
-- [Bibliothèque client MQTT pour ESP32](https://github.com/knolleary/pubsubclient)
-- [Courtier MQTT documentation officielle de mosquitto](https://mosquitto.org)
-- [Domoticz](https://www.domoticz.com)
+- [Autodiscovery](https://roelofjanelsinga.com/articles/mqtt-discovery-with-an-arduino/)
+- [Économie d’énergie](https://lastminuteengineers.com/esp32-sleep-modes-power-consumption/)

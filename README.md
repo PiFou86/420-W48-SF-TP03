@@ -153,4 +153,59 @@ Le code doit être fourni sous la forme d’un projet « Platform.IO » bien str
 - [Home assistant](https://www.home-assistant.io)
   - [Courtier mosquitto (MQTT) pour Home assistant](https://www.home-assistant.io/docs/mqtt/broker)
 - [Autodiscovery](https://roelofjanelsinga.com/articles/mqtt-discovery-with-an-arduino/)
+- [MQTT Sensor + availability topic](https://www.home-assistant.io/integrations/sensor.mqtt/)
 - [Économie d’énergie](https://lastminuteengineers.com/esp32-sleep-modes-power-consumption/)
+
+## 6 - Quelques bouts de code qui pourraient vous servir
+
+### 6.1 - Testament (Will)
+
+Lors d'un connexion à MQTT, vous pouvez spécifier un testament. Ce testament consiste à envoyer un message dans un sujet (topic) au moment de la déconnexion. Ce mécanisme peut être utilisé afin de savoir si votre périphérique est disponible (connecté). En résumé, une fois la connexion configurée avec le testament, vous envoyez un message indiquant que le périphérique est disponible (même topic que le testament). À la déconnection, MQTT va envoyer le message configuré dans le testament pour indiquer l'indisponibilité du périphérique.
+
+Pour un périphérique de type capteur, le sujet a utiliser est "homeassistant/sensor/<identifiant>/status".
+
+Exemple :
+
+```cpp
+if (this->m_client->connect(Configuration.getClientId().c_str(),
+                            Configuration.getMqttUser().c_str(),
+                            Configuration.getMqttPassword().c_str(),
+                            Configuration.getMqttWillTopic().c_str(), 0,
+                            true, "offline")) {
+  this->publish(Configuration.getMqttWillTopic().c_str(),
+                          "online");
+  Logger.infoln(String(F("MQTT: Connected to MQTT server.")));
+} else {
+  Logger.errorln(String(F("MQTT: Failed to connect to MQTT server.")));
+}
+```
+
+### 6.2 - Autodiscovery
+
+À la place de modifier le fichier de configuration YAML d'Home assistant, vous pouvez utiliser la fonctionnalité d'auto découverte de périphérique. Pour rendtre votre périphérique découvrable, vous devez envoyer un message JSON qui indique ses caractèristiques.
+
+Voici un exemple de JSON :
+
+```JSON
+{
+  "availability_topic": "homeassistant/sensor/piscine/status",
+  "device": {
+    "identifiers": "d7ae114c",
+    "manufacturer": "PFL Technology",
+    "model": "Pool Monitoring PMSE01 v0.1",
+    "name": "Pool Monitoring System",
+    "sw_version": "f76f4640798cf77257362636b100103d"
+  },
+  "device_class": "temperature",
+  "unique_id": "pool_monitoring_pool_outdoortemperature",
+  "name": "pool_outdoor_temperature",
+  "unit_of_measurement": "°C",
+  "state_topic": "piscine/pool_outdoor/temperature",
+  "platform": "mqtt"
+}
+```
+  
+Ce type de messages est à envoyer dans un sujet avec le format suivant (topic) : "homeassistant/sensor/pool_monitoringpool_outdoortemperature/config" par type de mesure. "pool_monitoringpool_outdoortemperature" est ici un identifiant unique pour la mesure. Si vous avez plusieurs type de mesure, comme sur le BME280, il faut un sujet et message par type de mesures. Si vous avez plusieurs périphérique, vous devriez ajouter l'identifant de périphérique dans le sujet de l'état (ici `piscine/pool_outdoor/temperature` pourrait être `piscine_d7ae114c/pool_outdoor/temperature`).
+  
+  Toujours dans cet exemple, le sujet de disponibilité pourrait être `homeassistant/sensor/piscine_d7ae114c/status`.
+  

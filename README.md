@@ -207,5 +207,13 @@ Voici un exemple de JSON :
   
 Ce type de messages est à envoyer dans un sujet avec le format suivant (topic) : "homeassistant/sensor/pool_monitoringpool_outdoortemperature/config" par type de mesure. "pool_monitoringpool_outdoortemperature" est ici un identifiant unique pour la mesure. Si vous avez plusieurs type de mesure, comme sur le BME280, il faut un sujet et message par type de mesures. Si vous avez plusieurs périphérique, vous devriez ajouter l'identifant de périphérique dans le sujet de l'état (ici `piscine/pool_outdoor/temperature` pourrait être `piscine_d7ae114c/pool_outdoor/temperature`).
   
-  Toujours dans cet exemple, le sujet de disponibilité pourrait être `homeassistant/sensor/piscine_d7ae114c/status`.
+Toujours dans cet exemple, le sujet de disponibilité pourrait être `homeassistant/sensor/piscine_d7ae114c/status`.
   
+Exemple de génération d'identifiant "unique" pour ESP32 :
+  
+```cpp
+String getMachineId() {
+  uint32_t macPart = ESP.getEfuseMac() & 0xFFFFFFFF;
+  return String(macPart, HEX);
+}
+```

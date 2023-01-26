@@ -197,10 +197,10 @@ Voici un exemple de JSON :
     "sw_version": "f76f4640798cf77257362636b100103d"
   },
   "device_class": "temperature",
-  "unique_id": "pool_monitoring_pool_outdoortemperature",
+  "unique_id": "pool_monitoring_d7ae114c_pool_outdoortemperature",
   "name": "pool_outdoor_temperature",
   "unit_of_measurement": "°C",
-  "state_topic": "piscine/pool_outdoor/temperature",
+  "state_topic": "piscine_d7ae114c/pool_outdoor/temperature",
   "platform": "mqtt"
 }
 ```

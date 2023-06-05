@@ -149,7 +149,7 @@ Le code doit être fourni sous la forme d’un projet « Platform.IO » bien str
 
 - [Wifi manager](https://github.com/khoih-prog/ESP_WiFiManager)
 - [Courtier MQTT documentation officielle de mosquitto](https://mosquitto.org)
-- [Bibliothèque client MQTT pour ESP32](https://github.com/knolleary/pubsubclient)
+- [Bibliothèque client MQTT pour ESP32](https://github.com/knolleary/pubsubclient) - [Documentatin de l'API](https://pubsubclient.knolleary.net/api)
 - [Home assistant](https://www.home-assistant.io)
   - [Courtier mosquitto (MQTT) pour Home assistant](https://www.home-assistant.io/docs/mqtt/broker)
 - [Autodiscovery](https://roelofjanelsinga.com/articles/mqtt-discovery-with-an-arduino/)
@@ -205,6 +205,8 @@ Voici un exemple de JSON :
 }
 ```
   
+Afin d'utiliser l'autodiscovery, vous devez envoyer des messages longs. Si le message ne s'envoie pas, c'est que vous avez dépassé la limite du tampon du client MQTT. Pour modifié cette valeur, vous pouvez utiliser la méthode `setBufferSize`. Généralement, une valeur de un kilo devrait être suffisante (`this->m_client->setBufferSize(1024)`)
+
 Ce type de messages est à envoyer dans un sujet avec le format suivant (topic) : "homeassistant/sensor/pool_monitoringpool_outdoortemperature/config" par type de mesure. "pool_monitoringpool_outdoortemperature" est ici un identifiant unique pour la mesure. Si vous avez plusieurs type de mesure, comme sur le BME280, il faut un sujet et message par type de mesures. Si vous avez plusieurs périphérique, vous devriez ajouter l'identifant de périphérique dans le sujet de l'état (ici `piscine/pool_outdoor/temperature` pourrait être `piscine_d7ae114c/pool_outdoor/temperature`).
   
 Toujours dans cet exemple, le sujet de disponibilité pourrait être `homeassistant/sensor/piscine_d7ae114c/status`.

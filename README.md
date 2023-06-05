@@ -219,3 +219,5 @@ String getMachineId() {
   return String(macPart, HEX);
 }
 ```
+
+Plus de détail sur les champs : https://www.home-assistant.io/integrations/sensor.mqtt/

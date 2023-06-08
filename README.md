@@ -188,7 +188,7 @@ Voici un exemple de JSON :
 
 ```JSON
 {
-  "availability_topic": "homeassistant/sensor/piscine/status",
+  "availability_topic": "homeassistant/sensor/piscine_d7ae114c/status",
   "device": {
     "identifiers": "d7ae114c",
     "manufacturer": "PFL Technology",

@@ -129,10 +129,12 @@ Le registre doit indiquer la répartition des tâches. Si le travail est fait en
   - Facilité de configuration
   - Consommation électrique
 
-- Créativité (20%)
+- Créativité (15%)
   - Fonctionnement des ajouts
   - Originalité des ajouts
   - Utilité des ajouts
+
+- Présentation orale (5%)
 
 Le code doit être fourni sous la forme d’un projet « Platform.IO » bien structuré.
 

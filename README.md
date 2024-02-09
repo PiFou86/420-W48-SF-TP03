@@ -149,7 +149,7 @@ Le code doit être fourni sous la forme d’un projet « Platform.IO » bien str
 
 ## 5 - Références
 
-- [Wifi manager](https://github.com/khoih-prog/ESP_WiFiManager)
+- [Wifi manager](https://github.com/tzapu/WiFiManager)
 - [Courtier MQTT documentation officielle de mosquitto](https://mosquitto.org)
 - [Bibliothèque client MQTT pour ESP32](https://github.com/knolleary/pubsubclient) - [Documentatin de l'API](https://pubsubclient.knolleary.net/api)
 - [Home assistant](https://www.home-assistant.io)

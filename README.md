@@ -251,3 +251,122 @@ String getMachineId() {
 ```
 
 Plus de détail sur les champs : https://www.home-assistant.io/integrations/sensor.mqtt/
+
+### 6.3 - Autodiscovery - Exemples
+
+Dans cet exemple, nous allons définir la configuration pour un appareil qui a trois (3) entités :
+- un capteur de température (ESP -> Hass)
+- une valeur maximum de température (set : Hass -> ESP)
+- un bouton on/off pour allumer / éteindre un chauffage (set: Hass -> ESP)
+
+Pour définir cette configuration, on va devoir envoyer trois (3) messages dans MQTT, un par entité.
+
+#### 6.3.1 - Exemple de fichier de déclaration d'un capteur de température
+
+Sujet : `homeassistant/sensor/monBidule_d7ae114c_temperature/config`
+
+Payload :
+
+```json
+{
+  "availability_topic": "monBidule_d7ae114c/availability",
+  "device": {
+    "identifiers": "d7ae114c",
+    "manufacturer": "PFL Technology",
+    "model": "Mon bidule v0.1",
+    "name": "Mon bidule System",
+    "sw_version": "f76f4640798cf77257362636b100103d"
+  },
+  "device_class": "temperature",
+  "unique_id": "monBidule_d7ae114c_temperature",
+  "name": "temperature",
+  "unit_of_measurement": "°C",
+  "state_topic": "monBidule_d7ae114c/temperature/state",
+  "platform": "mqtt"
+}
+```
+
+#### 6.3.2 - Exemple de fichier de déclaration d'un contrôle de valeur numérique (Température maximum)
+
+Sujet : `homeassistant/number/monBidule_d7ae114c_temperature_max/config`
+
+Payload :
+
+```json
+{
+  "availability_topic": "monBidule_d7ae114c/availability",
+  "device": {
+    "identifiers": "d7ae114c",
+    "manufacturer": "PFL Technology",
+    "model": "Mon bidule v0.1",
+    "name": "Mon bidule System",
+    "sw_version": "f76f4640798cf77257362636b100103d"
+  },
+  "device_class": "temperature",
+  "unique_id": "monBidule_d7ae114c_temperaturemax",
+  "name": "Temperature max",
+  "unit_of_measurement": "°C",
+  "min" : -20,
+  "max" : 20,
+  "mode" : "slider",
+  "command_topic": "monBidule_d7ae114c/temperature_max/set",
+  "state_topic": "monBidule_d7ae114c/temperature_max",
+  "step": 0.1,
+  "platform": "mqtt"
+}
+```
+
+#### 6.3.3 - Exemple de fichier de déclaration d'un bouton on/off (Allumer / éteindre un chauffage)
+
+Sujet : `homeassistant/switch/monBidule_d7ae114c_chauffage/config`
+
+Payload :
+
+```json
+{
+  "availability_topic": "monBidule_d7ae114c/availability",
+  "device": {
+    "identifiers": "d7ae114c",
+    "manufacturer": "PFL Technology",
+    "model": "Mon bidule v0.1",
+    "name": "Mon bidule System",
+    "sw_version": "f76f4640798cf77257362636b100103d"
+  },
+  "device_class": "switch",
+  "unique_id": "monBidule_d7ae114c_chauffage",
+  "name": "Chauffage",
+  "icon": "mdi:radiator",
+  "command_topic": "monBidule_d7ae114c/chauffage/set",
+  "state_topic": "monBidule_d7ae114c/chauffage",
+  "platform": "mqtt"
+}
+```
+
+#### 6.3.4 - Tests - Mise en place
+
+Les trois messages de déclaration devraient normalement être envoyés depuis votre bidule (ESP32). Pour faire des tests, nous allons utiliser le client de test fourni par le complément "MQTT" :
+
+- Rendez-vous dans "Paramètres > Appareils et services > MQTT > Configurer"
+- Envoyez les trois messages précédents (sujet / payload) (normalement ESP -> Hass)
+- Simulons aussi la disponibilité de votre bidule et donnons les étauts de la température max déjà configurée et de l'état du bouton (normalement ESP -> Hass) :
+  - Disponibilité :
+    - Sujet : `monBidule_d7ae114c/availability`
+    - Payload : `online` 
+  - Température max :
+    - Sujet : `monBidule_d7ae114c/temperature_max`
+    - Payload : `4.1`
+  - État du bouton :
+    - Sujet : `monBidule_d7ae114c/chauffage`
+    - Payload : `OFF`
+- À partir de la même fenêtre, écoutez sur le sujet `monBidule_d7ae114c/#`
+
+Maintenant que les six (6) messages sont envoyés, Home Assistant pense que :
+  - notre bidule est disponible
+  - il y a trois (3) entités : une en réception seulement, deux en réception / définition
+  - La température max configurée est 4,1°C, l'état du chauffage est éteint
+
+#### 6.3.4 - Tests - Intégration
+
+- Ouvrez une nouvelle fenêtre et rendez-vous dans "Paramètres > Appareils et services" : MQTT devrait vous indiquer que vous avez "1 APPAREIL". (Si vous en aviez déjà avant, vous devriez en voir un de plus !)
+- Choisissez l'appareil "Mon bidule System"
+- Au centre, vous verrez les trois (3) entités

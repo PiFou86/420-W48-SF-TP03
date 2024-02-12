@@ -154,6 +154,7 @@ Le code doit être fourni sous la forme d’un projet « Platform.IO » bien str
 - [Bibliothèque client MQTT pour ESP32](https://github.com/knolleary/pubsubclient) - [Documentatin de l'API](https://pubsubclient.knolleary.net/api)
 - [Home assistant](https://www.home-assistant.io)
   - [Courtier mosquitto (MQTT) pour Home assistant](https://www.home-assistant.io/docs/mqtt/broker)
+  - [Configuration of MQTT components via MQTT discovery](https://www.home-assistant.io/integrations/mqtt/) : section Configuration of MQTT components via MQTT discovery
 - [Autodiscovery](https://roelofjanelsinga.com/articles/mqtt-discovery-with-an-arduino/)
 - [MQTT Sensor + availability topic](https://www.home-assistant.io/integrations/sensor.mqtt/)
 - [Économie d’énergie](https://lastminuteengineers.com/esp32-sleep-modes-power-consumption/)

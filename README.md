@@ -349,6 +349,9 @@ Les trois messages de déclaration devraient normalement être envoyés depuis v
 - Rendez-vous dans "Paramètres > Appareils et services > MQTT > Configurer"
 - Envoyez les trois messages précédents (sujet / payload) (normalement ESP -> Hass)
 - Simulons aussi la disponibilité de votre bidule et donnons les étauts de la température max déjà configurée et de l'état du bouton (normalement ESP -> Hass) :
+  - Température actuelle :
+    - Sujet : monBidule_d7ae114c/temperature/state
+    - Payload : 21.23
   - Disponibilité :
     - Sujet : `monBidule_d7ae114c/availability`
     - Payload : `online` 
@@ -369,4 +372,11 @@ Maintenant que les six (6) messages sont envoyés, Home Assistant pense que :
 
 - Ouvrez une nouvelle fenêtre et rendez-vous dans "Paramètres > Appareils et services" : MQTT devrait vous indiquer que vous avez "1 APPAREIL". (Si vous en aviez déjà avant, vous devriez en voir un de plus !)
 - Choisissez l'appareil "Mon bidule System"
-- Au centre, vous verrez les trois (3) entités
+- Au centre, vous verrez les deux (2) contrôles et un (1) capteur
+
+![Autodiscovery - Exemple](assets/7636441/87c6c059-e0e2-4a18-bd8d-50078bd5e4ad)
+
+- Modifiez l'état du bouton (il va revenir à sa position initiale après car il n'y a rien pour modifier réellement l'état) ainsi que la température maximum
+- Revenez sur la fenêtre qui écoute les messages, vous devriez avoir un affichage similaire au suivant :
+
+![Autodiscovery - Action des boutons](assets/7636441/9a850470-0a11-419b-af6f-7df84aec8e73)

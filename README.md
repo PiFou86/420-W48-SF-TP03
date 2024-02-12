@@ -254,7 +254,7 @@ Plus de détail sur les champs : https://www.home-assistant.io/integrations/sens
 
 ### 6.3 - Autodiscovery - Exemples
 
-Dans cet exemple, nous allons définir la configuration pour un appareil qui a trois (3) entités :
+Dans cet exemple, nous allons définir la configuration pour un appareil qui a un (1) capteur et deux (2) contrôles (les contrôles ne sont pas obligatoires dans votre TP !) :
 - un capteur de température (ESP -> Hass)
 - une valeur maximum de température (set : Hass -> ESP)
 - un bouton on/off pour allumer / éteindre un chauffage (set: Hass -> ESP)
@@ -374,9 +374,11 @@ Maintenant que les six (6) messages sont envoyés, Home Assistant pense que :
 - Choisissez l'appareil "Mon bidule System"
 - Au centre, vous verrez les deux (2) contrôles et un (1) capteur
 
-![Autodiscovery - Exemple](assets/7636441/87c6c059-e0e2-4a18-bd8d-50078bd5e4ad)
+![Autodiscovery - Exemple](img/autodiscovery_exemple_configuration.png)
 
 - Modifiez l'état du bouton (il va revenir à sa position initiale après car il n'y a rien pour modifier réellement l'état) ainsi que la température maximum
 - Revenez sur la fenêtre qui écoute les messages, vous devriez avoir un affichage similaire au suivant :
 
-![Autodiscovery - Action des boutons](assets/7636441/9a850470-0a11-419b-af6f-7df84aec8e73)
+![Autodiscovery - Action des boutons](img/autodiscovery_exemple_ecoute.png)
+
+Les messages reçus des contrôles devraient être reçus par votre bidule : il doit donc s'y abonner et traiter les messages et renvoyer un message avec le nouveau statut (sorte de validation qu'il a bien été pris en compte, sinon Home Assistant va afficher l'ancien)

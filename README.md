@@ -349,12 +349,12 @@ Les trois messages de déclaration devraient normalement être envoyés depuis v
 - Rendez-vous dans "Paramètres > Appareils et services > MQTT > Configurer"
 - Envoyez les trois messages précédents (sujet / payload) (normalement ESP -> Hass)
 - Simulons aussi la disponibilité de votre bidule et donnons les étauts de la température max déjà configurée et de l'état du bouton (normalement ESP -> Hass) :
-  - Température actuelle :
-    - Sujet : monBidule_d7ae114c/temperature/state
-    - Payload : 21.23
   - Disponibilité :
     - Sujet : `monBidule_d7ae114c/availability`
     - Payload : `online` 
+  - Température actuelle :
+    - Sujet : `monBidule_d7ae114c/temperature/state`
+    - Payload : 21.23
   - Température max :
     - Sujet : `monBidule_d7ae114c/temperature_max`
     - Payload : `4.1`

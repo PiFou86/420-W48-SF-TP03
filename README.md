@@ -106,7 +106,7 @@ Le document word doit décrire le contexte du projet, sa planification, la répa
 
 La structure du document comprend :
 
-- Préparation du projet : (20%)
+- Préparation du projet : (10%)
   - Contexte du projet
   - Planification, attribution des tâches
   - La forme pourra être un texte explicatif ou un schéma hiérarchique des différentes étapes du projet
@@ -117,23 +117,25 @@ La structure du document comprend :
 
 - Registre des heures consacrées au projet (5%)
 Le registre doit indiquer la répartition des tâches. Si le travail est fait en équipe, le registre doit montrer les tâches respectives que chaque personne aura fait avec le nombre d’heures par tâche.
-- Vidéo de 5 minutes illustrant le fonctionnement (15%)
+- Vidéo de 5 minutes illustrant le fonctionnement (10%)
   - Présentation rapide du circuit
   - Présentation rapide de la structure du code et des choix de conception
   - Présentation du fonctionnement
+  - Publicité
 
-- Code (20%)
+- Code (50%)
   - Bon fonctionnement du programme
   - Respect des bonnes pratiques
   - Modularité et utilisation adéquate de la POO
   - Optimisation de la mémoire
 
-- Produit d’une qualité de type production (hors montage qui est un prototype) (20%)
+- Produit d’une qualité de type production (hors montage qui est un prototype) (10%)
   - Manuel d’utilisation
   - Facilité de configuration
   - Consommation électrique
+  - Autonomie de la batterie
 
-- Créativité (15%)
+- Créativité (10%)
   - Fonctionnement des ajouts
   - Originalité des ajouts
   - Utilité des ajouts

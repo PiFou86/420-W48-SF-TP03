@@ -155,7 +155,7 @@ Le code doit être fourni sous la forme d’un projet « Platform.IO » bien str
 
 ## 5 - Références
 
-- [Module 13 - WiFiManager et MQTT](https://github.com/PiFou86/420-W48-SF/tree/main/Module13_ESP32_WiFiManager_MQTT/README.md)
+- [Module 13 - WiFiManager et MQTT](https://github.com/PiFou86/420-W48-SF/blob/main/Module13_ESP32_WiFiManager_MQTT/Module13_ESP32_WiFiManager_MQTT_Exercices.md)
 - [Home assistant](https://github.com/PiFou86/420-W48-SF/blob/main/random/README.md#home-assistant)
 - [Autodiscovery](https://github.com/PiFou86/420-W48-SF/blob/main/random/IntegrationMQTT/README.md)
 - [Économie d’énergie](https://lastminuteengineers.com/esp32-sleep-modes-power-consumption/)

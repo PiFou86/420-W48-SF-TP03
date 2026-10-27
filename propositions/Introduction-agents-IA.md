@@ -1,6 +1,6 @@
 # Développer le TP03 avec un agent IA
 
-> Guide proposé aux étudiants. Les règles de remise et d'évaluation sont celles du sujet officiel. Ce guide accompagne la proposition de révision du TP03 et reste indépendant du fournisseur de l'agent.
+> Guide d'accompagnement du [TP03](../README.md), indépendant du fournisseur de l'agent. Les règles de remise et d'évaluation sont celles du sujet.
 
 ## 1. Ce que vous allez apprendre
 
@@ -21,7 +21,7 @@ Utilisez l'outil et les modalités d'accès présentés en cours. Ouvrez le dép
 Avant de lui confier une modification :
 
 1. Identifiez la carte et l'environnement PlatformIO utilisés par l'équipe.
-2. Compilez vous-mêmes le projet de départ. Gardez le message d'erreur si la compilation échoue.
+2. Initialisez un projet PlatformIO dans `src/` ou adaptez un projet du cours : ce dépôt fournit un gabarit de remise, sans programme de départ. Suivez les indications de [`src/README.md`](../src/README.md), puis compilez vous-mêmes ce premier projet. Gardez le message d'erreur si la compilation échoue.
 3. Conservez un point de retour avec Git et examinez les changements déjà présents.
 4. Repérez le fichier d'instructions reconnu par votre outil et la façon dont il le charge. Si nécessaire, fournissez explicitement vos consignes au début de la session.
 5. Gardez les véritables mots de passe et clés hors du dépôt et des échanges avec l'agent. Utilisez des valeurs d'exemple dans la documentation.
@@ -32,7 +32,7 @@ Lisez les demandes d'autorisation de l'agent avant de les accepter. Pour démarr
 
 Les instructions du projet servent à rappeler les contraintes stables. Elles ne remplacent pas le sujet du TP et ne garantissent pas que l'agent les respectera.
 
-Voici un exemple à adapter et à placer dans le fichier reconnu par votre outil. Les emplacements des fichiers d'instructions varient selon l'outil; un fichier nommé `AGENTS.md` n'est pas chargé automatiquement par tous les agents.
+Si vous utilisez l'IA, le sujet demande un fichier `AGENTS.md` à la racine du dépôt. Adaptez l'exemple ci-dessous dans ce fichier et ajoutez les liens vers les traces des décisions analysées dans votre rapport. Les emplacements des fichiers d'instructions varient selon l'outil; un fichier nommé `AGENTS.md` n'est pas chargé automatiquement par tous les agents. Vérifiez son chargement et, au besoin, fournissez les consignes explicitement ou référencez-les dans le fichier reconnu par votre outil.
 
 ```text
 Projet : TP03, prototype ESP32 en C++ avec PlatformIO.
@@ -153,7 +153,7 @@ Réalisez l'atelier en binôme et échangez les rôles de pilotage et de relectu
 
 | Durée | Activité | Résultat attendu |
 | --- | --- | --- |
-| 10 min | Compiler le départ, repérer les modules et choisir une petite amélioration. | État initial connu et comportement attendu écrit en deux phrases. |
+| 8 min | Compiler le départ, repérer les modules et choisir une petite amélioration. | État initial connu et comportement attendu écrit en deux phrases. |
 | 2 min | Créer un point de retour Git et noter les fichiers modifiés. | Commit initial avec message clair. |
 | 10 min | Fournir les consignes et demander une analyse sans modification. | Plan court que les deux personnes savent expliquer. |
 | 15 min | Faire réaliser une seule étape et relire les différences. | Changements limités, questions de compréhension résolues. |
@@ -194,10 +194,9 @@ Le registre des heures décrit votre travail humain : conception, échanges avec
 
 Les pratiques proposées dans ce guide sont adaptées au contexte pédagogique et au matériel du TP. Deux principes sont également explicités par les documentations officielles : cadrer une tâche avant de laisser l'agent agir et vérifier ses résultats avec des moyens concrets.
 
-- [OpenAI — bonnes pratiques pour Codex](https://learn.chatgpt.com/guides/best-practices) : pratiques éprouvée pour de meilleurs résultats.
+- [OpenAI — bonnes pratiques pour Codex](https://learn.chatgpt.com/guides/best-practices) : pratiques éprouvées pour de meilleurs résultats.
 - [Microsoft — bonnes pratiques pour utiliser l'IA dans VS Code](https://code.visualstudio.com/docs/agents/best-practices) : contexte ciblé, plan et revue des modifications.
 - [Anthropic — bonnes pratiques pour Claude Code](https://code.claude.com/docs/en/best-practices) : exploration préalable et moyens de vérification.
 - [GitHub — utilisation responsable des agents Copilot](https://docs.github.com/en/copilot/responsible-use/agents) : limites et responsabilité de la personne qui utilise le code produit.
-
 
 Ces liens constituent des références de méthode, sans obligation de choisir ces produits. Les interfaces et modalités d'accès peuvent évoluer.

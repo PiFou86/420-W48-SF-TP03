@@ -9,7 +9,7 @@
 
 - Lien du dépôt : 
 
-## Lien de la vidéo de présentation
+## Liens des vidéos obligatoires
 
-- Lien YouTube #1 :
-- Lien YouTube #2 (si applicable) :
+- Vidéo de fonctionnement (5 minutes) :
+- Vidéo promotionnelle (1 minute maximum) :

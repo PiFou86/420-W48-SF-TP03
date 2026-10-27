@@ -6,25 +6,26 @@
 
 ### 1.1 - Déroulement du TP
 
-- La remise du travail doit être effectuée pour le dimanche 29 novembre 2026 23:59 maximum (Présenté le vendredi 27 novembre 2026 en AM, mais remis officiellement le dimanche 29 novembre 2026 avant minuit)
+- La présentation aux Dragons a lieu le vendredi 27 novembre 2026 en avant-midi et dure **20 minutes maximum par équipe, questions du jury comprises**
+- La remise officielle du travail doit être effectuée au plus tard le dimanche 29 novembre 2026 à 23 h 59
 - Le projet est réalisé en équipe de 2 personnes
 - Vidéo de 5 minutes illustrant le fonctionnement
 - Vidéo promotionnelle de maximum 1 min de votre produit
-- Les vidéos doivent être déposées sur Youtube avec une option de partage « non listée »
+- Les vidéos doivent être déposées sur YouTube avec une visibilité « non répertoriée »
 - Vous devez utiliser Git pour gérer vos sources
 - Vous devez utiliser SharePoint pour gérer votre document de rapport (Onglet "Fichiers" de votre équipe Teams)
 - La structure de votre répertoire racine doit suivre la structure donnée dans le dépôt Git
-- Le code source doit être dans le répertoire « src » et suivre la structure d’un projet Platform.io
-- Vous devez modifier un fichier README.md contenant :
+- Le code source doit être dans le répertoire « src » et suivre la structure d’un projet PlatformIO
+- Vous devez compléter le fichier `AUTHORS.md` avec :
   - Le prénom, nom et numéro de matricule de chaque personne
-  - Le lien de la vidéo sur Youtube
+  - Les liens des deux vidéos sur YouTube
 - Documentation détaillée du produit (manuel d’utilisation & documentation technique)
-- La remise du travail doit être effectuée sur et à la date indiquée sur la plateforme d'enseignement
+- Les modalités de remise sont indiquées sur Léa
 
 ### 1.2 - À remettre sur la plateforme d'enseignement Léa
 
-- Un document word contenant le détail du projet
-- Votre code source
+- Un document Word contenant le détail du projet
+- Votre projet PlatformIO complet et les fichiers nécessaires à sa compilation et à sa configuration, ainsi que `AGENTS.md` si vous utilisez l'IA
 - Les liens YouTube de vos vidéos de présentation
 
 ### 1.3 - Structure de la remise
@@ -32,19 +33,19 @@
 - Vous devez remplir le fichier "AUTHORS.md".
   Il donne le nom et matricule des équipiers
 - Votre code source doit être dans le répertoire  ```src``` du présent dépôt Git
-- Le répertoire source doit suivre la structure d’un projet Platform.io
+- Le répertoire source doit suivre la structure d’un projet PlatformIO : `src/platformio.ini` à la racine du projet et code C++ dans `src/src/` (voir le [guide du répertoire source](./src/README.md))
 - Vous devez fournir une vidéo de 5 minutes illustrant le circuit, le code et le fonctionnement
 - Vous devez aussi fournir une vidéo promotionnelle de votre projet de maximum 1 min
 - Pour les vidéos :
-  - Elles doivent être déposées sur Youtube avec une option de partage « non listée »
-  - Leurs liens doivent être indiqués dans le document word et dans le fichier "AUTHORS.md"
+  - Elles doivent être déposées sur YouTube avec une visibilité « non répertoriée »
+  - Leurs liens doivent être indiqués dans le document Word et dans le fichier "AUTHORS.md"
 - Le répertoire "documents" doit contenir votre rapport de TP
 
 ### 1.4 - Évaluation
 
 L'évaluation du travail est effectuée par les enseignants de l'UE en se basant sur :
 
-- L'historique de Git et de Teams/Sharepoint font office de référence pour évaluer la proportion du travail effectué par chaque équipier
+- Les historiques de Git et de Teams/SharePoint font office de référence pour évaluer la contribution de chaque équipier
 
 - La qualité et le contenu du code source :
 
@@ -58,7 +59,7 @@ L'évaluation du travail est effectuée par les enseignants de l'UE en se basant
   - Utilisation de fichiers de configuration
   - etc.
 
-- La qualité et le contenu du document word :
+- La qualité et le contenu du document Word :
   
   - Français
   - Schéma
@@ -82,14 +83,14 @@ Le code donné dans le cours n'est pas à référencer.
 
 ### 1.5 - Utilisation des agents IA
 
-Vous pouvez utiliser un/des agent(s) IA pour développer un produit plus ambitieux pendant les quatre semaines du projet. Si vous choisissez l'IA pour le développement, utilisez le **mode agent dans votre environnement de développement**, connecté à votre dépôt et capable de consulter les fichiers, de les modifier et de lancer les vérifications autorisées. Une conversation dans une interface web avec copier-coller de code ne constitue pas la démarche attendue.
+Vous pouvez utiliser un ou plusieurs agents IA pour développer un produit plus ambitieux pendant les quatre semaines du projet. Si vous choisissez l'IA pour le développement, utilisez le **mode agent dans votre environnement de développement**, connecté à votre dépôt et capable de consulter les fichiers, de les modifier et de lancer les vérifications autorisées. Une conversation dans une interface web avec copier-coller de code ne constitue pas la démarche attendue.
 
 - Définissez les besoins et les contraintes avant de demander du code. Faites proposer un plan pour les changements importants, puis avancez par petites étapes vérifiables.
 - Relisez les modifications et conservez une architecture claire et proportionnée au besoin. La quantité de code ne donne pas de points : évitez les dépendances, abstractions et fonctionnalités inutiles. "La perfection est atteinte non pas lorsqu'il n'y a plus rien à ajouter, mais lorsqu'il n'y a plus rien à retirer." (Antoine de Saint-Exupéry)
 - Vous restez responsables de comprendre et de vérifier le code livré. Distinguez la compilation et les tests sur ordinateur des essais réellement effectués sur le montage.
 - Conservez dans le dépôt un environnement de travail avec l'agent (« harness ») : consignes adaptées au projet, commande de compilation et moyens de vérification. Il n'est pas demandé de développer votre propre agent.
 - Déclarez les outils utilisés et leur rôle, puis analysez trois décisions significatives : proposition envisagée, choix de l'équipe, justification et vérification du résultat. Il n'est pas demandé de remettre toutes les conversations.
-- Le fichier AGENTS.md doit être disponible dans le dépôt et contenir les consignes et moyens de travail avec l'agent, ainsi que les traces pertinentes des décisions significatives.
+- Si vous utilisez l'IA, le fichier `AGENTS.md` doit être disponible à la racine du dépôt et contenir les consignes du projet, les commandes de vérification et les liens vers les traces pertinentes des décisions significatives. Développez l'analyse de ces décisions dans le rapport. Vérifiez que votre outil charge ces consignes; au besoin, fournissez-les explicitement ou référencez-les dans le fichier d'instructions propre à l'outil.
 - Ne fournissez pas de mots de passe réels, de clés d'accès ou de données personnelles à l'agent et ne les ajoutez pas au dépôt.
 
 L'usage de l'IA reste facultatif et aucun abonnement payant n'est exigé. Les équipes sans IA expliquent également leur démarche, leurs décisions et leurs apprentissages.
@@ -118,20 +119,22 @@ La station météo sert de mise en contexte. Vous devez développer un produit �
 Pour ce projet, vous devez utiliser le matériel et technologies suivantes :
 
 - ESP32
-- Wifi
+- Wi-Fi
 - BME280 ou BMP280
 - MQTT
 - Home Assistant avec autodiscovery
-- WifiManager (pour la configuration du Wi-Fi et les variables de configuration pour MQTT minimalement)
-- Git (Github) : utilisez la lien vers le travail sur classroom50 disponible sur la plateforme d'enseignement Léa pour le dépôt de votre code source
+- WiFiManager (pour la configuration du Wi-Fi et, au minimum, des paramètres MQTT)
+- Git (GitHub) : utilisez le lien vers le travail sur classroom50 disponible sur Léa pour déposer votre code source; le contenu du dépôt doit en plus être remis sur Léa dans un fichier ZIP contenant le projet PlatformIO complet, y compris les fichiers de configuration et les fichiers nécessaires à la compilation et à la vérification. Le code source doit être dans le répertoire « src » et suivre la structure d’un projet PlatformIO.
+
+Le schéma suivant illustre le socle de communication. MQTT Explorer est un outil de diagnostic facultatif; les fonctions propres à votre produit complètent ce socle.
 
 ![Schéma fonctionnel](./img/schema_fonctionnel.png)
 
-## 3 - Description détaillée du document à remettre
+## 3 - Livrables et critères d'évaluation
 
-Le document word doit décrire le contexte du projet, sa clientèle et sa proposition de valeur, sa planification, la répartition des tâches avec un registre des heures passées, les schémas du montage, les diagrammes UML pertinents ainsi que l'inventaire des composants et une estimation des coûts.
+Le document Word doit décrire le contexte du projet, sa clientèle et sa proposition de valeur, sa planification, la répartition des tâches avec un registre des heures passées, les schémas du montage, les diagrammes UML pertinents ainsi que l'inventaire des composants et une estimation des coûts. Il comprend également l'analyse de la démarche, le manuel, la documentation technique, les résultats des vérifications et les hypothèses économiques décrits ci-dessous.
 
-La structure du document comprend :
+Les éléments évalués sont les suivants. Le rapport rassemble les éléments écrits; le code et les vidéos sont remis selon les modalités de la section 1.
 
 - Préparation du projet : (8%)
   - Contexte du projet, clientèle, problème à résoudre et proposition de valeur
@@ -178,7 +181,7 @@ La structure du document comprend :
   - Procédure et résultats des vérifications : mesures reçues dans Home Assistant, autodiscovery, pertes et retours du Wi-Fi et de MQTT, capteur absent ou lecture invalide, scénario propre au produit
   - Les équipes sans IA fournissent également les moyens de compilation et de vérification
   - Consommation électrique
-  - Autonomie de la batterie
+  - Autonomie si le produit est alimenté par batterie
 
 - Créativité (15%)
   - Fonctionnement des ajouts
@@ -187,18 +190,19 @@ La structure du document comprend :
   - Différenciation et cohérence du produit au service d'un besoin client
 
 - Présentation orale aux Dragons (10%)
+  - Durée totale : **20 minutes maximum par équipe, questions du jury comprises**
   - But du produit, clientèle et proposition de valeur
   - Prévisions économiques : coût unitaire, prix de vente, marge et hypothèses de volume et de dépenses
   - Financement demandé, utilisation prévue et prochaine étape du développement
-  - Capacité à donner envie d'investir, à défendre les choix et à répondre aux questions; chaque personne doit pouvoir expliquer les choix fonctionnelles, techniques et entrepreneuriaux
+  - Capacité à donner envie d'investir, à défendre les choix et à répondre aux questions; chaque personne doit pouvoir expliquer les choix fonctionnels, techniques et entrepreneuriaux
 
 **Total : 100 %.** La vidéo promotionnelle s'adresse aux clients pour donner envie d'acheter; la présentation aux Dragons s'adresse aux investisseurs pour donner envie de financer le produit. Les estimations économiques et énergétiques doivent être accompagnées de leurs hypothèses et distinguées des résultats mesurés. Il est généralement apprécié de diffuser la publicité durant la présentation aux Dragons.
 
-Les dragons sont des investisseurs fictifs, composés de vos enseignants et de personnes invitées.
+Le jury des Dragons est composé de vos enseignants et de personnes invitées qui jouent le rôle d'investisseurs fictifs.
 
 Trois équipes seront sélectionnées et gagneront un trophée pour le meilleur produit/présentation/pitch. Ces équipes sont déterminées par un vote des dragons et des étudiants. La note finale est indépendante de ce vote.
 
-Le code doit être fourni sous la forme d’un projet « Platform.IO » bien structuré.
+Le code doit être fourni sous la forme d’un projet PlatformIO bien structuré.
 
 ## 4 - Idées d'extensions
 
@@ -210,7 +214,7 @@ L'utilisation d'un agent IA peut vous aider à réaliser des intégrations plus 
 
 - **Voix et audio** : microphone, commande vocale, haut-parleur, réponse parlée, annonce d'un événement ou interaction avec un assistant vocal comme [Assist de Home Assistant](https://www.home-assistant.io/voice_control/) (HAL 9000 m'achète un peu).
 - **Interface utilisateur** : écran LCD, OLED ou tactile, menus, boutons, encodeur rotatif, voyants ou retour sonore pour configurer et utiliser le produit sans ouvrir Home Assistant.
-- **Actionneurs** : relais, servomoteur, ventilateur, pompe, brumisateur, Peltier (Chaud / Froid)  ou éclairage pour agir sur l'environnement, avec commande manuelle et retour d'état. Les montages de démonstration utilisent des charges basse tension adaptées au matériel.
+- **Actionneurs** : relais, servomoteur, ventilateur, pompe, brumisateur, module Peltier (chauffage/refroidissement) ou éclairage pour agir sur l'environnement, avec commande manuelle et retour d'état. Les montages de démonstration utilisent des charges basse tension adaptées au matériel.
 - **Signalisation et éclairage** : ruban, anneau ou matrice de DEL adressables pour afficher un état, guider l'utilisateur, signaler une progression ou personnaliser l'ambiance du produit.
 - **Caméra et vision** : ESP32-CAM ou autre caméra, capture d'images, détection d'objets ou de personnes avec [Frigate](https://docs.frigate.video/), et reconnaissance de visages avec [Frigate](https://docs.frigate.video/configuration/face_recognition/) ou un autre service compatible.
 - **Identification et personnalisation** : badge NFC/RFID ou code QR pour sélectionner un profil, déclarer une action ou associer un équipement à un utilisateur.
@@ -237,7 +241,7 @@ Ces exemples servent de points de départ pour vos recherches, selon les besoins
 | Positionnement mécanique | **Servomoteur SG90** ([fiche fabricant](https://towerpro.com.tw/product/sg90-7/)) ou **MG90S** ([fiche fabricant](https://towerpro.com.tw/product/mg90s-3/)) | Ouvrir une trappe, orienter une caméra ou régler un volet; vérifier le couple nécessaire, la course, la tension et le courant d'alimentation du modèle choisi. |
 | Chauffage ou refroidissement | **Module Peltier TEC1-12706** ([exemple de fiches fabricant](https://www.weisourcing.com/everredtronics/downloads/)) ou [ensemble Peltier avec dissipateur](https://www.adafruit.com/product/1335) | Régulation thermique; prévoir un dissipateur sur la face chaude, une alimentation et un circuit de puissance adaptés. |
 | Ventilation | **Ventilateur 5 V ou 12 V**, éventuellement **4 fils PWM avec retour de vitesse** ([guide fabricant](https://www.noctua.at/en/support/faqs/microcontroller-guide-pwm-setup-and-rpm-monitoring)) | Ventilation pilotée, ajustement de vitesse et suivi de rotation selon le modèle; vérifier les tensions et l'interface de commande. |
-| Badges NFC/RFID | **RFID readers** [Exemple RFID](https://projecthub.arduino.cc/coolcat231/simple-rfid-tutorial-d6f10e), avec badges compatibles | Identification, profil utilisateur ou suivi d'emprunts; vérifier les types de badges pris en charge par le lecteur. |
+| Badges NFC/RFID | **Lecteurs RFID**, par exemple **RC522/MFRC522** ([exemple RFID](https://projecthub.arduino.cc/coolcat231/simple-rfid-tutorial-d6f10e)), avec badges compatibles | Identification, profil utilisateur ou suivi d'emprunts; vérifier les types de badges pris en charge par le lecteur. L'exemple utilise un Arduino Uno : adaptez le câblage et les broches à votre ESP32. |
 | DEL adressables | **WS2812B / NeoPixel**, **SK6812**, notamment en version RGBW ([guide NeoPixel](https://learn.adafruit.com/adafruit-neopixel-uberguide)); **APA102 / DotStar** ([guide DotStar](https://learn.adafruit.com/adafruit-dotstar-leds)) | Rubans, anneaux ou matrices contrôlés pixel par pixel. Les variantes NeoPixel utilisent une ligne de données; les APA102 utilisent des lignes de données et d'horloge. Prévoir l'alimentation et l'adaptation de niveau nécessaires. |
 
 Les moteurs, servomoteurs, pompes, ventilateurs, modules Peltier et rubans de DEL sont alimentés par une source dimensionnée pour leur consommation, avec un circuit de commande approprié. Les GPIO de l'ESP32 servent à la commande. Pour les rubans, estimez la consommation selon le nombre de DEL et la luminosité prévue; le [guide d'alimentation NeoPixel](https://learn.adafruit.com/adafruit-neopixel-uberguide/powering-neopixels) donne des exemples de dimensionnement.
